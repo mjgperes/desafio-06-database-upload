@@ -66,10 +66,6 @@ class ImportTransactionsService {
 
     await categoriesRepository.save(newCategories);
 
-    console.log(findCategories);
-    console.log(categories);
-    console.log(transactions);
-
     const finalCategories = [...newCategories, ...findCategories];
 
     const createdTransactions = transactionsRepository.create(
